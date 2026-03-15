@@ -10,8 +10,7 @@
     "client": "npm start --prefix client",
     "install-all": "npm install && cd client && npm install",
     "setup": "node setup.js",
-    "test-setup": "node test-setup.js",
-    "postinstall": "node setup.js"
+    "test-setup": "node test-setup.js"
   },
   "keywords": ["coding", "battle", "ai", "mern"],
   "author": "",

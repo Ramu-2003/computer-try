@@ -3,6 +3,10 @@ import axios from 'axios';
 
 export const AuthContext = createContext();
 
+// Set base URL for axios
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+axios.defaults.baseURL = API_URL;
+
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(localStorage.getItem('token'));
