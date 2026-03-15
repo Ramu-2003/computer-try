@@ -1,8 +1,7 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
-import { AuthContext } from '../context/AuthContext';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +11,6 @@ const Register = () => {
     confirmPassword: ''
   });
   const [loading, setLoading] = useState(false);
-  const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
